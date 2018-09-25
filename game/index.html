@@ -11,20 +11,20 @@
     <table>
     <thead>
         <th>
-            Arena
+            西普数据
         </th>
-        <th>
+        <!-- <th>
             Webcam
-        </th>
+        </th> -->
     </thead>
     <tbody>
         <tr>
             <td>
                 <div id="parent">
                     <div id="utils">
-                        <div id="player1Name" class="playerName">Sub-Zero</div>
+                        <div id="player1Name" class="playerName">Player1</div>
                         <div id="player1LifeBar" class="lifebar"><div class="life" id="player1Life"></div></div>
-                        <div id="player2Name" class="playerName">Kano</div>
+                        <div id="player2Name" class="playerName">Player2</div>
                         <div id="player2LifeBar" class="lifebar"><div class="life" id="player2Life"></div></div>
                     </div>
                     <div id="arena">
@@ -39,21 +39,17 @@
         </tr>
         <tr>
             <td colspan="2">
-                <h1>Instructions</h1>
+                <h1>使用须知</h1>
                 <p>
                     <ul class="instructions-list">
-                        <li>For playing with gesture recognition you need Google Chrome 22+ or Firefox 19+.</li>
-                        <li>Choose proper place to position your computer. I recommend you to use white wall as background and dark clothes for best contrast.</li>
-                        <li>Stay outside the scope of the webcam. It needs to capture the background behind you at first place.</li>
-                        <li>Allow to the web page to use your webcam.</li>
-                        <li>If the webcam canvas is black then you can start playing otherwise restart and try again.</li>
-                        <li>Stay in about 2.5 meters away from your computer in the middle of the view zone.</li>
-                        <li>For walking left stay in the left side of the webcam view region and right if you want to walk right. If you want to stop just go back in the middle.</li>
-                        <li>Raise your left or right arm to punch.</li>
-                        <li>Raise your left or right leg to kick.</li>
-                        <li>Squat and your fighter will squat too.</li>
-                        <li>Squat and punch for squat low punch attack.</li>
-                        <li>Enjoy!</li>
+                        <li>请在 Google Chrome 22+ 或者 Firefox 19+ 浏览器环境下进行游戏。</li>
+                        <li>提示 "是否成为主机？" 时，若填写“yes”，表示成为主机；填写其他，表示不为主机。</li>
+                        <li>双人联机游戏时，必须输入相同的姓名。</li>
+                        <li>使用方向键操控人物进行移动。</li>
+                        <li>方向左、右键操作向左、右方向移动。</li>
+                        <li>方向上键操作向上跳起，方向下键操作向下蹲。</li>
+                        <li>‘A’、‘S’键操作人物用拳头攻击。</li>
+                        <li>‘D’、‘F’键操作人物用腿攻击。</li>
                     </ul>
                 </p>
             </td>
@@ -100,8 +96,8 @@
                         }
 
                     },
-                    isHost: /^yes$/i.test(prompt('Are you going to be host?')),
-                    gameName: prompt('Enter game name:'),
+                    isHost: /^yes$/i.test(prompt('是否成为主机？')),
+                    gameName: prompt('请输入姓名:'),
                     gameType: 'network'
                 };
 
